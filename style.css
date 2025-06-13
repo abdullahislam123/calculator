@@ -113,3 +113,6 @@ form input.operator:hover {
         width: 120px;
     }
 }
+.calculator h2{
+    color: white;
+}
