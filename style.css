@@ -143,3 +143,6 @@ form input.operator:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 16px;
 }
+.operator{
+    width: 100px;
+}
