@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+.heading {
+    background-color: orange;
+    color: black;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calculator form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 0%;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    justify-content: 20px 0;
+    border: 4px solid white;
+    border-radius: 1%;
+
+
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+
+form input.equal {
+    width: 145px;
+}
+
+form input.operator {
+    background-color: orange;
+}
+
+@media only screen and (min-width: 300px) {
+    h1 {
+        font-size: 16px;
+    }
+
+    .choice {
+        height: 80px;
+        width: 80px;
+    }
+
+    img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .score-board {
+        font-size: 14px;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 18px;
+    }
+
+    #msg {
+        font-size: 14px;
+    }
+}
