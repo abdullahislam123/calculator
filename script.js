@@ -1,21 +1,37 @@
+const display = document.querySelector('input[name="display"]');
+
 function insert(value) {
-    document.querySelector('input[name="display"]').value += value;
+    display.value += value;
 }
 
 function clearDisplay() {
-    document.querySelector('input[name="display"]').value = '';
+    display.value = '';
 }
 
 function deleteLast() {
-    let current = document.querySelector('input[name="display"]').value;
-    document.querySelector('input[name="display"]').value = current.toString().slice(0, -1);
+    display.value = display.value.toString().slice(0, -1);
 }
 
 function calculate() {
-    let expression = document.querySelector('input[name="display"]').value;
     try {
-        document.querySelector('input[name="display"]').value = eval(expression);
+        display.value = eval(display.value);
     } catch {
-        document.querySelector('input[name="display"]').value = 'Error';
+        display.value = 'Error';
     }
 }
+
+// Keyboard support
+document.addEventListener('keydown', function (event) {
+    const key = event.key;
+
+    if (!isNaN(key) || ['+', '-', '*', '/', '.'].includes(key)) {
+        insert(key);
+    } else if (key === 'Enter') {
+        event.preventDefault();  // Prevent form submission
+        calculate();
+    } else if (key === 'Backspace') {
+        deleteLast();
+    } else if (key.toLowerCase() === 'c') {
+        clearDisplay();
+    }
+});

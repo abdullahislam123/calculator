@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 
-.heading {
-    background-color: orange;
+h1 {
+    background-color: rgb(255, 255, 255);
     color: black;
     text-align: center;
 }
